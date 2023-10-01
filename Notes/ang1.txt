@@ -1,0 +1,31 @@
+app.html
+________
+<div class="jumbotron">
+  <h1 class="text-center" [style]="{'color':color}">Welcome</h1>
+</div>
+<div class="row">
+
+  <div class="col-md-4" style="border: 2px; ;" >
+    <form class="container" style="background-color:rgb(190, 229, 247) ;"  >
+    EMAIL<input type="text" required ><br><br>
+    PASSWORD<input type="password" name="pass" required class="form-control" [(ngModel)]="pass" ><br>
+    RE-TYPE PASSWORD<input type="password" name="repass" required class="form-control" [(ngModel)]="repass"><br>
+    <input type="button" class="btn btn-info" value="SUBMIT" (click)="submitButton()">&nbsp;
+    <input type="button" class="btn btn-info" value="RESET" (click)="resetButton()" ><br>
+  </form>
+  {{result}}
+  </div>
+
+  <div class="col-md-4" style="padding: 2px;background-image:Screenshot(2).png; ">
+    <select name="bcolor" [(ngModel)]="color" style="background-color:rgb(198, 229, 243) ;">
+      <option value="red">RED</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    
+  </div>
+  
+  <div class="col-md-4">
+    <app-login title="Hello world"></app-login>
+        </div>
+</div>

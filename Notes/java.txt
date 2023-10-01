@@ -1,0 +1,52 @@
+Annotations
+___________
+>tells the compiler what to do
+>ex:-@override,@after.....
+>similer to comment,but comment will be ignored during compiling but the annotations will be present inside the compiled code
+>ex:-
+public class apr27 {
+	private int sum;
+	private String name;
+	public apr27() {
+	}
+	public apr27(int sum, String name) {
+		super();
+		this.sum = sum;
+		this.name = name;
+	}
+	public int getSum() {
+		return sum;
+	}
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "apr27 [sum=" + sum + ", name=" + name + "]";
+	}
+	}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Reflection 
+___________
+>used to display the behavioural methods in java
+>ex:-import java.lang.reflect.Method;
+	import java.util.Scanner;
+	public class Main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Class<Thread> ex=java.lang.Thread.class;
+		Method[] m=ex.getDeclaredMethods();
+		for(int i=0;i<m.length;i++) {
+		System.out.println(m[i].getName());
+		}
+	}
+	}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

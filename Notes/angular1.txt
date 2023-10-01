@@ -1,0 +1,146 @@
+Apply a Style
+
+--->app.html
+
+<div class="jumbotron">
+  <h1 class="text-center" [style]="{'color':color}">Welcome</h1>
+</div>
+<div class="row">
+
+  <div class="col-md-4" style="border: 2px; ;"  >
+    <app-login [title]="title" backgroundColor="blue"></app-login>
+  </div>
+
+  <div class="col-md-4" style="padding: 2px;">
+  </div>
+  
+  <div class="col-md-4">
+    <app-login title="Hello world"></app-login>
+  </div>
+
+</div>
+
+--->login.html
+
+<p>{{title}}</p>
+<div class="container" [ngStyle]="{'background-color':backgroundColor}">
+    UserName <input type="text"><br>
+    Password<input type="password"><br>
+    <input type="button" value="submit" name="Login">&nbsp;
+    <input type="button" value="reset" name="reset">
+        
+</div>
+
+
+--->login.ts
+
+import { Component, Input, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  @Input() title:string='';
+  @Input() backgroundColor:any="yellow";
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  
+}
+
+________________________________________________________________________________________________________________________________
+reactive form
+-------------->product.componets.ts
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+
+@Component({
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
+})
+export class ProductComponent implements OnInit {
+  ProductForm:any;
+  constructor(private fb:FormBuilder) {
+  this.ProductForm=this.fb.group(
+    {
+    id:[''],
+    name:[''],
+    price:['']
+    }
+  );  
+  }
+
+  ngOnInit(): void {
+  }
+--------------------------------->product.component.html
+<p>product Details!</p>
+<form [formGroup]="ProductForm">
+    id:<input class="form-control" id="" formControlName="id" />
+    Name:<input class="form-control" id="" formControlName="name" />
+    Price:<input class="form-control" id="" formControlName="price" />
+
+</form>
+<div>{{ProductForm.value | json}}</div>
+
+
+------------------------------>app.componenet.html
+<div class="jumbotron">
+    <div class="row">
+      <div class="col-md-4">
+        <app-product></app-product>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+----------------------------------->app.module.ts
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+------------------------------------->app.components.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+ 
+     }
+_____________________________________________________________________________
+//app.component.ts
+
+import { Component, Inject }
+from '@angular/core';
+import { PLATFORM_ID }
+from '@angular/core';
+import { isPlatformWorkerApp }
+from '@angular/common';
+
+@Component({
+selector: 'app-root',
+templateUrl: './app.component.html',
+styleUrls: [ './app.component.css' ]
+})
+export class AppComponent {
+num = 'run';
+}
+
+//app.html
+
+<div [ngSwitch]="num">
+  <div *ngSwitchCase="'run'">One</div>
+  <div *ngSwitchCase="'sit'">Two</div>
+  <div *ngSwitchCase="'sleep'">Three</div>
+  <div *ngSwitchCase="'draw'">Four</div>
+  <div *ngSwitchCase="'hide'">Five</div>
+  </div>

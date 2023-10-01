@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <div>
+    <h1>Login to your acccount</h1>
+   <h1>{{<title>}}</h1>
+  </div></div>
+<div class="row">
+  
+  <div class="col-md-4">
+    <form class="container">
+    MAIL<input type="text" required><br><br>
+    PASSWORD<input type="password" name="pass" required><br><br>
+    RE-TYPE PASSWORD<input type="password" name="repass" required><br><br>
+    <input type="button" class="btn btn-info" value="SUBMIT" onclick="submitButton">
+    <input type="button" class="btn btn-success" value="RESET" onclick="resetButton" />
+  </form>
+  </div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4">{{pass}}</div>
+</div>

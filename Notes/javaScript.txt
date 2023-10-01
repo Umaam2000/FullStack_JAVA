@@ -1,0 +1,49 @@
+		Java script
+	--------------------------------
+OPERATORS
+__________
+>Arithamatic operators
+	>>+
+		5+5=10
+		x+y=xy
+		x+8+y=x8y
+	>>-
+		5-3=2
+	>>*
+		5*5=25
+	>>/
+		5/5=1
+	>>%
+		4%3=1
+	>>++ INCREMENT
+	>>-- Decrement
+>Assignment
+	=  	a=10;
+	+=  	
+	-=
+	/=
+	%=
+	*=
+	**= 	exponential
+	>>= right shift 
+	&= 
+>Comparison
+	== equal or not y/n just value
+	=== Strict equality both value and type
+	!=
+	!==
+	>
+	<
+	?
+>Logical
+	&& 
+	||
+	!
+	(x)??=10 if x is null then 10 assigned to x
+
+
+
+
+
+
+____________________________________________________________________________________________________________

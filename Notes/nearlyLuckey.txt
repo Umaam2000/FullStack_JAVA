@@ -1,0 +1,82 @@
+				
+1. Nearly Lucky
+--------------------
+Kim finds the digits 3, 4 and 7 to be lucky digits. A number is called Nearly Lucky if the count of lucky digits in a number is also a lucky digit.
+You are given N numbers, tell how many of them are Nearly Lucky?
+
+Function description
+Complete the nearlyLucky function in the editor below. It has the following parameter(s):
+Name	Type	Description
+Arr	INTEGER ARRAY	
+Given N numbers
+
+Return	
+The function must return an INTEGER denoting the Count of numbers which are Nearly Lucky.
+Constraints
+1  ≤ N ≤  10^5
+1  ≤ Arr[i] ≤  10^9
+Input format for debugging
+The first line contains an integer, N, denoting the number of elements.
+Each line i of the N subsequent lines (where 0 ≤ i < N) contains an integer describing Arr[i].
+Sample Testcases
+Input	Output	Output Description
+1
+40047
+1
+40047 has 3 lucky digits, which is a lucky digit.
+2
+40447
+313
+1
+40447 is nearly lucky because it has 4 lucky digits, and the count 4 itself is a lucky digit. 
+
+313 is not nearly lucky because it has 2 lucky digits, and the count 2 is not a lucky digit.
+2
+41347
+343
+2
+41347 has 4 lucky digits and the count 4 itself is a lucky digit. Hence 41347 is nearly lucky.
+
+343 has 3 lucky digits and the count 3 is also a lucky digit. Hence 343 is also nearly lucky.
+
+import java.io.*;
+import java.util.*;
+import java.lang.Math;
+public class Solution {
+    public static int nearlyLucky(int[] Arr){
+         int num=0,count=0,rem=0,total=0;
+         for(int i:Arr)
+        {
+            num=i;
+            while(num>0)
+            {
+                rem=num%10;
+                if(rem==3||rem==4||rem==7)
+                {
+                    count++;
+                }
+                num=num/10;
+            }
+            if(count==3||count==4||count==7)
+            {
+                total++;
+            }
+            count=0;
+        }
+    return total;
+    }
+
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int N;
+        N=scan.nextInt();
+        int[] Arr = new int[N];
+        for(int j=0;j<N;j++){
+            Arr[j]=scan.nextInt();
+        }
+        int result;
+        result = nearlyLucky(Arr);
+        System.out.print(result);
+        return ;
+    }
+}

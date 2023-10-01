@@ -1,0 +1,125 @@
+				
+2. Scoring an Array
+--------------------
+You are given an array of integers, arr, of size array_length.
+
+
+
+A "couple" is any two elements in a row. A “triplet” is any three elements in a row. The elements of a couple and a triplet must be continuous and non-circular i.e. they must NOT wrap around the end of the array.
+
+
+
+For example, in the array arr = [1, 2, 3, 4], there are three couples and two triplets as shown below:
+
+
+
+Couples: (1, 2), (2, 3), and (3, 4)
+Triplets: (1, 2, 3) and (2, 3, 4)
+
+
+Your task is to score arr as per the following rules:
+
+
+
+For every couple in arr whose sum is even, increase the score by 5.
+For every triplet in arr whose sum is odd AND whose product is even, increase the score by 10.
+ If neither of the above conditions are met, then the score is unchanged
+
+
+Output the final value of score for arr.
+
+
+
+Notes:
+Couples and triplets may overlap with each other
+The score is initially 0
+The array may contain positive and negative numbers
+0 is an even number.
+Function description
+Complete the score function in the editor below. It has the following parameter(s):
+Name	Type	Description
+array_length	INTEGER	
+The size of arr.
+arr	INTEGER ARRAY	
+The array you need to score
+Return	
+The function must return an INTEGER denoting the final value of score for arr.
+Constraints
+1  ≤ array_length ≤  10^5
+-100  ≤ arr[i] ≤  100
+Input format for debugging
+The first line contains an integer, array_length, denoting the number of elements in arr.
+Each line i of the array_length subsequent lines (where 0 ≤ i < array_length) contains an integer describing arr[i].
+Sample Testcases
+Input	Output	Output Description
+1
+94
+0
+Since array_length is 1, there are no couplets or triplets. Therefore, the score is 0
+5
+-26
+71
+6
+-3
+-69
+15
+Only couple having even sum is (-3,-69) so we add 5 to score.
+And triple having even product and odd sum is (-26,71,6) so we add further 10 to the score.
+Final score=5+10=15
+5
+19
+0
+-95
+-93
+-37
+10
+Couple having even sum are (-95,-93) and (-93,-37) so we add 10 to score.
+And there is no triple having even product and odd sum.
+Final score=5+5=10
+import java.io.*;
+import java.util.*;
+import java.lang.Math;
+
+
+public class Solution {
+    public static int score(int array_length, List<Integer> arr) {
+        // Write your code here
+    
+    int sum=0;
+    int result=0;
+    for(int i=0;i<array_length-1;i++){
+        int x=arr.get(i);
+        int y=arr.get(i+1);
+        sum=x+y;
+        if(sum%2==0){
+            result+=5;
+        }
+    }
+    for(int i=0;i<array_length-2;i++){
+        int x=arr.get(i);
+        int y=arr.get(i+1);
+        int z=arr.get(i+2);
+        sum=x+y+z;
+        int product=x*y*z;
+        if(sum%2!=0 && product%2==0){
+            result+=10;
+        }
+    }
+    return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+    
+        int array_length = Integer.parseInt(scan.nextLine().trim());
+        
+        List<Integer> arr = new ArrayList<>(array_length);
+        for(int j=0; j<array_length; j++) {
+            arr.add(Integer.parseInt(scan.nextLine().trim()));
+        }
+    
+        int result = score(array_length, arr);
+    
+        System.out.println(result);
+    }
+}
