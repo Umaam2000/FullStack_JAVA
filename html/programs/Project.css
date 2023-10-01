@@ -1,0 +1,16 @@
+.c1{
+    margin: 3%;
+    position: relative;
+}
+
+.txt1 {
+    position: absolute;
+    top: 17px;
+    left: 50px;
+}
+
+.txt2 {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}

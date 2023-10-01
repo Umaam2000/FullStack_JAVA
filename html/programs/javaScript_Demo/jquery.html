@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn1(){
+            var x=parseInt(document.getElementById("no1").value) ;
+            var y=parseInt(document.getElementById("no2").value);
+            document.getElementById("result").innerHTML=x+y;
+            
+        }
+    </script>
+</head>
+<body>
+    Number1: <input type="number" id="no1">
+    Number2: <input type="number" id="no2">
+    <input type="button" value="Add" onclick="fn1()">
+    <div id="result"></div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <script>
+
+       $(document).ready(function(){
+
+        function fn1()
+        {
+           var x=$("#no1").val();
+           var y=$("#no2").val();
+           $("#result").html(x+y);
+        }
+
+        $("#no1").keyup(function(){
+                fn1();
+            });
+
+        $("#no2").keyup(function(){
+                fn1();
+            });
+        $("#btnAdd").click(function(){
+               fn1();
+            });
+        });   
+    </script>
+</head>
+<body>
+    Number1: <input type="number" id="no1">
+    Number2: <input type="number" id="no2">
+    <input type="button" value="Add" >
+    <div id="result"></div>
+</body>
+</html>

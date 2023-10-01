@@ -1,0 +1,3 @@
+function fnPrime(){
+    alert(hii)
+}

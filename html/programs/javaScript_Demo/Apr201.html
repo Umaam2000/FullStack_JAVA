@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .highlight {
+        background-color: yellow;
+    }
+</style>
+<script>
+    const name = document.getElementById('HH');
+
+ //Event listener for mouseenter
+name.addEventListener('mouseenter', function() {
+name.classList.add('highlight');
+});
+
+//Event listener for mouseleave
+name.addEventListener('mouseleave', function() {
+name.classList.remove('highlight');
+});
+
+</script>
+</head>
+<body>
+    <div id="1">
+    Name:<input ID=HH type="text" onfocus="yellow()">
+    Email:<input type="email" onfocus="yellow()" >
+    phoneNumber:<input type="number" onfocus="yellow()">
+</div>
+</body>
+</html> 
+
+
+

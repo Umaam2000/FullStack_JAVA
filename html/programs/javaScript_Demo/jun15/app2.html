@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app2.css">
+</head>
+<body>
+    <div class="jumbotron">
+        <div><h1 id="titlename">facebook</h1></div>&nbsp;
+        <div id="logindetails">
+            Email or phone <input type="text" pattern="[a-zA-Z0-9.]{5,}@gmail.com" required width="100%" id="email">&nbsp;
+            Password <input type="text" pattern="[a-zA-Z0-9.]{8,}" required width="100%">&nbsp;
+            <input type="button" value="Login" onclick="fnLogin()" id="login" style="background-color: rgb(112, 163, 240); color: white;" >
+        </div>
+
+    </div>
+<div id="loginPage">
+        <fieldset id="datas">
+            <legend>Login to FaceBook</legend>
+            Name: <input type="text" id="Name"><br>
+            Gender: <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Others</option>
+            </select> <br>     
+            Nationality: <input type="radio" name="nation" id="india" value="Indian">
+            <label for="india">Indian</label>
+            &nbsp;
+            <input type="radio" name="nation" id="other" value="Nonindian">
+            <label for="other">Nonindian</label>
+        </fieldset>
+
+    </div>
+    <script src="app2.js"></script>
+</body>
+</html>

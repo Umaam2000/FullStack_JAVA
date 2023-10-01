@@ -1,0 +1,37 @@
+.jumbotron{
+    text-align: left;
+    background-color: rgb(63, 110, 219);
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    display: grid;
+    text-align:center;
+    padding-left: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+}
+#titlename{
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#logindetails{
+    padding-top: 2px;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 2/4;
+}
+#loginPage{
+    display: grid;
+    text-align:center;
+    padding-left: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+#datas{
+    grid-row:1;
+    grid-column: 3;
+}

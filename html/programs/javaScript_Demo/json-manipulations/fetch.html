@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello lets fetch datas from a fakeRest...</h1>
+    <div>
+        <input type="button" value="simple fetch" onclick="fnSimpleFetch()">
+        <div id="result-SimpleFetch"></div>
+    </div>
+    <div>
+        Id:<input type="number" name="" id="id">
+        <input type="button" value="fetch by id" onclick="fnFetchById()">
+        <div id="result-FetchById"></div>
+    </div>
+    <div>
+        Id lsb:<input type="number" name="" id="lid">
+        Id msb:<input type="number" name="" id="mid">
+        <input type="button" value="fetch by id" onclick="fnFetchByIds()">
+        <div id="result-FetchByIds"></div>
+    </div>
+    
+
+    <script src="fetch.js"></script>
+</body>
+</html>

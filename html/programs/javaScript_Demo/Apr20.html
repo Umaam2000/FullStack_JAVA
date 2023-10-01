@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Example</title>
+<script>
+function validateForm() {
+var password = document.getElementById("password").value;
+var confirmPassword = document.getElementById("confirmPassword").value;
+
+if (password !== confirmPassword) {
+alert("Password and Confirm Password do not match."); 
+}
+else{
+    alert("password created sucessfully");
+}
+}
+
+function printDetails() {
+var email = document.getElementById("email").value;
+var dob = document.getElementById("dob").value;
+var gender = document.getElementById("gender").value;
+var qualification = document.getElementById("qualification").value;
+
+var details = "Email: " + email + "<br>";
+details += "Date of Birth: " + dob + "<br>";
+details += "Gender: " + gender + "<br>";
+details += "Qualification: " + qualification + "<br>";
+
+document.getElementById("details").innerHTML = details;
+
+document.getElementById("loginButton").style.display = "block";
+return details;
+}
+function pasfun(){
+
+}
+</script>
+</head>
+<body>
+<form onsubmit="printDetails()">
+<label for="email">Email:</label>
+<input type="email" id="email" required>
+
+<label for="password">Password:</label>
+<input type="password" id="password" required>
+
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword" onkeyup="validateForm()" required>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" required>
+
+<label for="gender">Gender:</label>
+<select id="gender" required>
+<option value="">Select</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+
+<label for="qualification">Qualification:</label>
+<input type="radio" id="education" name="edu" value="ECE"/>ECE
+        <input type="radio" id="education" name="edu" value="MECH"/>MECH 
+        <input type="radio" id="education" name="edu" value="MCA"/>MCA 
+        <input type="radio" id="education" name="edu" value="CSE"/>CSE<br><br><br>
+
+<input type="submit" value="Next">
+</form>
+
+<div id="details"></div>
+
+<button id="loginButton" style="display: none;" >Login</button>
+</body>
+</html>

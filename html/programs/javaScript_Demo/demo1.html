@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoLogin</title>
+<script>
+    function fun1(){
+        var p1=document.getElementById("password").value;
+        var p2=document.getElementById("confirmPassword").value;
+        if(p1!==p2){
+            document.getElementById("confirmPassword").style.backgroundColor="red";
+            
+        }
+    }
+    function fun2(){
+        var d1=document.getElementById("fname").value;
+        var d2=document.getElementById("lname").value;
+        var d3=document.getElementById("email").value;
+        var d4=document.getElementById("dob").value;
+        var data="Name :"+d1+" "+d2+"Email :"+d3+"Date of Birth :"+d4;
+            document.getElementById("result").innerHTML=data;
+            document.getElementById("login").style.display="block";
+    }
+    function fun3(){
+        alert("You logined");
+    }
+</script>
+
+</head>
+<body>
+    <H1 style="text-align:center ;">Login to Demo</H1>
+    <div>
+        First Name :<input type="text" id="fname" pattern="[A-Z]{1}[a-zA-Z]*"><br><br>
+
+        Last Name :<input type="text" id="lname" pattern="[A-Z]{1}[a-zA-Z]*"><br><br>
+
+        Email :<input type="email" id="email"  placeholder="abc@gamil.com"><br><br>
+
+        Password :<input type="text" id="password" pattern="[a-zA-Z0-9.]{8,}"><br><br>
+
+        Confirm Password :<input type="text" id="confirmPassword" onblur="fun1()"><br><br>
+
+        Date of Birth :<input type="date" id="dob"><br><br>
+
+        Gender :<input type="radio" id="gender" name="gender" value="male"/> Male    
+        <input type="radio" id="gender" name="gender" value="female"/> Female<br/> 
+
+        <label for="edu"> Qualification:</label>
+    <select id="edu" required>
+    <option value="">Select</option>
+    <option value="ECE">ECE</option>
+    <option value="MECH">MECH</option>
+    <option value="MCA">MCA</option>
+    <option value="CSE">CSE</option>
+    </select>
+        <button id="verify" value="Preview" onclick="fun2()">Preview</button>
+
+        
+
+    </div>
+    <div id="result"></div>
+   <button id="login" onclick="fun3()">Login</button>
+
+   
+</body>
+</html>

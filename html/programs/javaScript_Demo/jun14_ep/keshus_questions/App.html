@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Find Mathematical Answers .......</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <h1>Find Pallindrom</h1>
+            Enter the input:<input type="text" id="original"><br><p></p>
+            <input type="button" value="Pallindrom" class="btn btn-success" name="Pallindrom" onclick="fnpalindrom()">
+            <div id="result-pallindrom"></div>
+            <br>
+
+            <h1>Find Prime</h1>
+            Enter the input:
+            <input type="number" id="lsb" style="width:20% ;">&nbsp;:&nbsp;
+            <input type="number" id="msb" style="width:20% ;"><br>
+            <input type="button" value="Prime"  class="btn btn-success" name="prime" onclick="fnPrime()">
+            <div id="result-prime"></div>
+            <br>
+
+            <h1>Find fibinocci</h1>
+            <input type="button" value="fibinocci" class="btn btn-success" name="fibinocci" onclick="fnFibonacci()">
+            <div id="result-fibinocci"></div>
+            <br>
+
+            <h1>Find sumOfElemts</h1>
+            Enter a number:<input type="=number" id="sumnum" >
+            <input type="button" value="sum Of elements" onclick="fnSum()">
+            <div id="result-sum"></div>
+            <br>
+        </div>
+
+        <div class="col-sm-3">
+            Enter a number:<input type="=number" id="fac" >
+            <input type="button" value="factorial" onclick="fnFactorial()">
+            <div id="result-factorial"></div>
+         </div>
+
+        <div class="col-sm-3">
+            
+        </div>
+
+        <div class="col-sm-3">
+            
+        </div>
+    </div>
+    <script src="pallindrom.js" ></script>
+</body>
+</html>

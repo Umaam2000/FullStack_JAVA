@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 style="text-align:center ;">June 12 2023 todays works...</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form" >
+                <div style="font-weight:bold ;" ><u>Activity 1: Print all even numbers from 0 – 10</u></div>
+                Enter the lower limit:<input id="lm" type="number" style="width:100%"><br>
+                Enter the upper limit:<input id="um" type="number"  style="width:100%"><br>
+            </div><br>
+            <input type="button" value="Proceed" class="btn btn-success" onclick="fnEven()">
+            <div id="result"></div>
+        </div>
+
+        <div class="col-md-4">
+        <div style="font-weight:bold ;" ><u>Activity 2:table containing entered details</u></div>
+            Enter your first name:<input type="text" id="fname" style="width:100%"><br>
+            Enter your last name:<input type="text" id="lname" style="width:100%" ><br>
+            Enter your department:
+            <select name="dept" id="dpt" style="width:100%">
+                <option value="ece">ECE</option>
+                <option value="ce">CE</option>
+                <option value="mech">MECH</option>
+                <option value="cse">CSE</option>
+            </select><br>
+            <p></p>
+            <input type="button" class="btn btn-success" value="add" onclick="fnAdd()">
+            <input type="button" class="btn btn-warning" value="update" onclick="fnUpdate()">
+            <input type="button" class="btn btn-danger" value="delete" onclick="fnDelete()">
+            <p></p>
+            <div>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>First_Name</th>
+                            <th>Last_Name</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="col-md-4">hii</div>
+    </div>
+    <script src="jun12.js"></script>
+</body>
+</html>
