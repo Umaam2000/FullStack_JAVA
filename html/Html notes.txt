@@ -1,0 +1,113 @@
+			HTML
+		------------------------
+Container tags
+-----------------
+<tag_name> …</tag_name> 
+
+<html>….</html>: This marks the beginning and ending of the webpage also it tells that the document is
+ an HTML document.
+
+<head>…</head>: This tag is used to define the head part of the document which contains the information related to the webpage.
+
+<title>…</title>: This tag stores the description of the web page, whatever given in these tags appears on the tab name while opened by the browser. It is described in the head tag.
+<body>….</body>: This tag is used to display all the information or data, i.e, text, images, hyperlinks videos, etc., on the webpage to the user.
+<h1>….</h1> to <h6>…</h6>: It is used for including headings of different sizes ranging from 1 to 6.
+<p>….</p>: When paragraphs are needed to be included, this tag is used
+<b>….</b>: Makes the contained text to bold.
+<i>…</i>: Makes the contained text to italic.
+<a href=”link.com”>…</a>: When we link some other webpages we add the hyper links to other webpages using this <a …>…</a>tag.
+<button>…</button>: This is used in many ways but mainly used to manipulate done by adding events and many more.
+<div>….</div>: This defines a section in a document. The webpage can be divided to different sections using the <div>….</div> tag.
+<iframe src=”link.com> </iframe>: When some other document is to be embedded like some video or image into HTML we use this tag.
+<nav>…</nav>: Defines a navigation bar that contains a set of menu or a menu of hyperlinks.
+<script>…</script> : This contains the javascript code that adds interactivity to the webpage.
+<ol>…</ol>: This tag is used to create ordered lists.
+<ul>…</ul>: This tag is used to create unordered lists.
+<li>…</li>: This tag is used to add list items.
+<br>: Inserts a line break in a webpage wherever needed.
+<hr>: Inserts a horizontal line wherever needed in the webpage.
+<img>: This tag is used to display the images on the webpage which were given in the src attribute of the tag.
+<input>: This is mainly used with forms to take the input from the user and we can also define the type of the input.
+<link>: When we store our CSS in an external file this can be used to link external files and documents to the webpage and it is mainly used to link CSS files.
+<meta>: Contains all metadata of the webpage. Metadata is the data about data and is described in the head tag.
+<source>: When an external media source is needed to be included in the webpage. source tag is used to insert any media source like audio, video etc… in our webpage.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML LIST
+_________
+Unordered list
+	<ul>
+        <li>Data Structures & Algorithm</li>
+        <li>Web Technology</li>
+        <li>Aptitude & Logical Reasoning</li>
+        <li>Programming Languages</li>
+    </ul>
+
+<ul style="list-style-type:circle"> to change style
+
+Ordered list
+	<ol>
+        <li>Array</li>
+        <li>Linked List</li>
+        <li>Stacks</li>
+        <li>Queues</li>
+        <li>Trees</li>
+        <li>Graphs</li>
+    </ol>
+
+<ol type="a"> to change type type can be a,A,i,I,1,etc
+
+---------------------------------------------------------
+Div tag
+________
+The div tag is used in HTML to make divisions of content in the web page like (text, images, header, footer, navigation bar, etc).
+
+<body><div > div tag   </div></body>
+
+---------------------------------------------------------
+Span
+_____
+<body>
+    <h1>Welcome to ooty</h1>
+    <p>nice to
+        <span style="color:red;background-color:navy">meeet you</span>
+    </p>
+</body>
+
+used to group elements for styling purposes (by using the class or id attributes), A better way to use it when no other semantic element is available.
+------------------------------------------------------------
+Table
+_____
+table>
+        <tr>
+            <td>Name</td>
+            <td>R.no</td>
+            <td>Marks</td>
+        </tr>
+        <tr>
+            <td>Uma</td>
+            <td>6</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Karthik</td>
+            <td>3</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>Niranj</td>
+            <td>2</td>
+            <td>80</td>
+        </tr>
+    </table>
+------------------------------------------------------------
+iframe
+_______
+display a website inside another website
+<iframe src="https://www.bing.com/search?pglt=41&q=apple&cvid=03dc7bddcdc24b809929d2eab7ba91a1&aqs=edge..69i57j0l2j46j0l3j46j0j69i11004.1910j0j1&FORM=ANNAB1&PC=U531"></iframe>
+
+----------------------------------------------
+Hyperlink
+_________
+<a href="dhvjchbj">SJkjds</a>
+-----------------------------------------------

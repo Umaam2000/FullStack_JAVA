@@ -1,0 +1,25 @@
+				CSS
+			------------------------
+
+CSS selector
+-------------
+>inline:
+	mentioned in the line of element;
+	<p style="jhdbjhgd">
+>Internel:
+	internal to the page
+	describe the style inside the same file;
+>Externel:
+	seperate file with extension .css 
+	apply in required file by <link...>
+   --------------------------------------------------
+> * - Universal selector
+> . - Class selector
+> # - id selector
+
+> div, span : will match both <span> and <div> elements.
+> div span : will match all <span> elements that are inside a <div> element.
+> ul > li : will match all <li> elements that are nested directly inside a <ul> element.
+>  p ~ span : will match all <span> elements that follow a <p>, immediately or not.
+>h2 + p will match the first <p> element that immediately follows an h2 element.
+>col || td will match all <td> elements that belong to the scope of the <col>.
